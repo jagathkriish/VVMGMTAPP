@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<h2>Please Enter your Expenses</h2>
+		<form method="POST" enctype="multipart/form-data" action="/registerExpense">
+			<div class="form-group">
+				<label for="expName">Expense Title:</label> <input type="text"
+					class="form-control" name = "expname" id="expname" placeholder="Expense Title">
+			</div>
+			<div class="form-group">
+				<label for="expDetail">Expense Details:</label> <input type="text"
+					class="form-control" name = "expdetail" id="expdetail" placeholder="Expense Details">
+			</div>
+			<div class="form-group">
+				<label for="expAmount">Expense Amount:</label> <input type="number"
+					class="form-control" name = "expamt" id="expamt" placeholder="Expense Amount">
+			</div>
+			<div class="form-group">
+				<label for="expAmount">Expense Amount:</label>
+				<input type="file" name="file" class="form-control" id="expfile" placeholder="Expense proof" />
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+
+</body>
+</html>

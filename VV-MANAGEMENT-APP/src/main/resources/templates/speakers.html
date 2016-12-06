@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Insert title here</title>
+</head>
+<body>
+Speakers from vshwavyaapak
+	<div th:unless="${#lists.isEmpty(speakers)}">
+	<dl th:each="speaker : ${speakers}">
+		<dt>
+		<span th:text="${speaker.id}"></span>
+		<span th:text="${speaker.name}"></span>
+		</dt>	
+	</dl>
+	</div>
+	<div th:if="${#lists.isEmpty(speakers)}">
+		<P>NO SPEAKERS</P>
+	</div>
+</body>
+</html>
