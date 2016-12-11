@@ -49,13 +49,13 @@ public class Application {
 		};
 	}
 	
-	/*@Bean
+	@Bean
 	public CommandLineRunner messages(){
 		return (args)->{
 			System.out.println(properties.getName());
 			System.out.println(properties.getLocation());
 		};
-	}*/
+	}
 	
 	@Bean
 	public CommandLineRunner expenses(){

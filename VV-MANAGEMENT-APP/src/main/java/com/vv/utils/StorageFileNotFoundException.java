@@ -2,7 +2,9 @@ package com.vv.utils;
 
 public class StorageFileNotFoundException extends StorageException {
 
-    public StorageFileNotFoundException(String message) {
+	private static final long serialVersionUID = 1L;
+
+	public StorageFileNotFoundException(String message) {
         super(message);
     }
 
