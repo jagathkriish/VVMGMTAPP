@@ -1,4 +1,4 @@
-package com.vv.utils;
+package com.vv.exception;
 
 public class StorageFileNotFoundException extends StorageException {
 

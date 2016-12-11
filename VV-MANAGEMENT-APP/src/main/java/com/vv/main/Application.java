@@ -14,12 +14,13 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import com.vv.model.SpeakerRepository;
+import com.vv.config.AppProperties;
 import com.vv.model.ExpenseRepository;
 import com.vv.model.Speaker;
 
 
 @SpringBootApplication
-@ComponentScan(basePackages={"com.vv.utils","com.vv.model","com.vv.main","com.vv.controller"})
+@ComponentScan(basePackages={"com.vv.config","com.vv.model","com.vv.main","com.vv.controller","com.vv.exception","com.vv.service"})
 @EntityScan(basePackages={"com.vv.model"})
 @EnableConfigurationProperties(AppProperties.class)
 @EnableJpaRepositories(basePackages={"com.vv.model"})
@@ -52,8 +53,7 @@ public class Application {
 	@Bean
 	public CommandLineRunner messages(){
 		return (args)->{
-			System.out.println(properties.getName());
-			System.out.println(properties.getLocation());
+			System.out.println(properties.getFileLocation());
 		};
 	}
 	

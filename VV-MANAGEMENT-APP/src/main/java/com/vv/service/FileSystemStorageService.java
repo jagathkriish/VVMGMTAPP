@@ -1,4 +1,4 @@
-package com.vv.utils;
+package com.vv.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -7,7 +7,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.vv.main.AppProperties;
+import com.vv.exception.StorageException;
+import com.vv.exception.StorageFileNotFoundException;
+import com.vv.config.AppProperties;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -23,7 +25,7 @@ public class FileSystemStorageService implements StorageService {
 
     @Autowired
     public FileSystemStorageService(AppProperties properties) {
-        this.rootLocation = Paths.get(properties.getFilelocation());
+        this.rootLocation = Paths.get(properties.getFileLocation());
     }
 
     @Override
