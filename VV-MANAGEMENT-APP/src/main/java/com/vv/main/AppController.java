@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.vv.model.Expense;
+import com.vv.model.ExpenseRepository;
 import com.vv.utils.StorageService;
 
 @Controller
 public class AppController {
-	
 	
 	private StorageService storageService;
 	private ExpenseRepository expenseRepo;
