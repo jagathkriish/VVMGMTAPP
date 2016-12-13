@@ -10,7 +10,8 @@ public class AppController {
 
 	@GetMapping("/")
     public String viewHomePage(Model model) throws IOException {
-        return "EnterExpenses";
+		String baseTemplateName = "EnterExpenses";
+        return baseTemplateName;
     }
 	
 }

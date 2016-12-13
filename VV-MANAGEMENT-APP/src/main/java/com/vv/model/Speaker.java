@@ -14,7 +14,7 @@ public class Speaker {
 	
 	private String name;
 
-	public Speaker() {
+	protected Speaker() {
 		
 	}
 

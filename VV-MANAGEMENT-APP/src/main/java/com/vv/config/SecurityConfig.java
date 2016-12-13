@@ -6,6 +6,7 @@ import org.springframework.security.config.annotation.authentication.configurers
 
 @Configuration
 public class SecurityConfig extends GlobalAuthenticationConfigurerAdapter {
+	@Override
 	public void init(AuthenticationManagerBuilder auth) throws Exception{
 		auth.inMemoryAuthentication().withUser("boot").password("boot").roles("USER").and().withUser("admin").password("admin")
 		.roles("USER","ADMIN");

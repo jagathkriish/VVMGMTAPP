@@ -68,12 +68,5 @@ public class Application {
 	public HealthIndicator springOneHealthIndicator(){
 		return ()->new Health.Builder().up().withDetail("message","SpringBootApp is running").build();
 	}
-	
-	/*@Bean
-	CommandLineRunner init(StorageService storageService) {
-		return (args) -> {
-            //storageService.deleteAll();
-            //storageService.init();
-		};
-	}*/
+
 }
