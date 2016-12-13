@@ -65,7 +65,7 @@ public class Application {
 	}
 	
 	@Bean
-	public HealthIndicator SpringOneHealthIndicator(){
+	public HealthIndicator springOneHealthIndicator(){
 		return ()->new Health.Builder().up().withDetail("message","SpringBootApp is running").build();
 	}
 	
