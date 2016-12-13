@@ -2,6 +2,8 @@ package com.vv.main;
 
 import java.util.stream.Stream;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.actuate.health.Health;
@@ -13,10 +15,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import com.vv.model.SpeakerRepository;
 import com.vv.config.AppProperties;
 import com.vv.model.ExpenseRepository;
 import com.vv.model.Speaker;
+import com.vv.model.SpeakerRepository;
 
 
 @SpringBootApplication
@@ -25,6 +27,8 @@ import com.vv.model.Speaker;
 @EnableConfigurationProperties(AppProperties.class)
 @EnableJpaRepositories(basePackages={"com.vv.model"})
 public class Application {
+	
+	private Logger log = LoggerFactory.getLogger(Application.class);
 	
 	private SpeakerRepository repository;
 	
@@ -53,7 +57,7 @@ public class Application {
 	@Bean
 	public CommandLineRunner messages(){
 		return (args)->{
-			System.out.println(properties.getFileLocation());
+			log.info(properties.getFileLocation());
 		};
 	}
 	
