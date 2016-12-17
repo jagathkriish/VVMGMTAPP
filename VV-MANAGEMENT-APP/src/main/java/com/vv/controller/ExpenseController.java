@@ -47,11 +47,6 @@ public class ExpenseController extends WebMvcConfigurerAdapter {
 	    binder.addValidators(fileValidator);
 	}
 
-	/*@InitBinder
-	protected void initBinderExpenseFeedForm(WebDataBinder binder) {
-		binder.setValidator(fileValidator);
-	}*/
-
 
 	@PostMapping("/registerExpense")
 	public String handleFileUpload(@RequestParam("file") MultipartFile file, @RequestParam("expname") String expName,
