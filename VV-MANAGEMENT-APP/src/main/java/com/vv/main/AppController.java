@@ -1,17 +1,22 @@
 package com.vv.main;
 
-import java.io.IOException;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import com.vv.model.ExpenseFeedForm;
 
 @Controller
 public class AppController {
-
+	
 	@GetMapping("/")
-    public String viewHomePage(Model model) throws IOException {
+    public String showExpenseEntryForm(ExpenseFeedForm expenseFeedForm) {
 		String baseTemplateName = "EnterExpenses";
         return baseTemplateName;
     }
+
+	/*@GetMapping("/old")
+    public String viewHomePage(Model model) throws IOException {
+		String baseTemplateName = "EnterExpenses";
+        return baseTemplateName;
+    }*/
 	
 }
